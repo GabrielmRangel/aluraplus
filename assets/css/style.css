@@ -2,6 +2,7 @@
     --branco-principal: #FFFFFF;
     --cinza-secundario: #C0C0C0;
     --botao-azul: #167BF7;
+    --botao-azul-hover: #1662c0;
     --cor-de-fundo: #00030C;
     --fonte-principal: 'Inter', sans-serif;
 }
@@ -22,7 +23,7 @@ body{
 .principal{
     background-image: url("../img/background.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     align-items: center;
     text-align: center;
     position: relative;
@@ -31,7 +32,7 @@ body{
 }
 
 .container{
-    height: 100vh;
+    height: 76vh;
     display: grid;
     grid-template-columns: 50% 50%;
 }
@@ -71,11 +72,20 @@ body{
     text-decoration: none;
 }
 
+.container__botao--azul:hover{
+    background-color: var(--botao-azul-hover);
+    text-decoration: underline;
+}
+
 .container__botao--secudario{
     background-color: transparent;
     border: 2px solid var(--branco-principal);
     position: relative;
     margin-top: -0.5vw;
+}
+
+.container__botao--secudario:hover{
+    text-decoration: underline;
 }
 
 .container__aviso{
@@ -87,7 +97,7 @@ body{
 
 .secundario{
     align-items: center;
-    margin: 0 10em;
+    margin: 0 5em;
 }
 
 .secundario__img{
@@ -125,4 +135,58 @@ body{
 .container__descricao{
     padding: 2em;
     width: 28vw;
+}
+
+.dispositivos{
+    text-align: center;
+}
+
+.dispositivos__titulo{
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.lista__item{
+    font-size: 32px;
+}
+
+.rodape{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5em 3em;
+}
+
+.rodape__logo{
+    align-self: center;
+    width: 102px;
+}
+
+.rodape__lista{
+    display: flex;
+    list-style-type: none;
+    padding: 0px;
+    margin-top: 2em;
+}
+
+.lista__link a{
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.lista__link a:hover{
+    text-decoration: underline;
+}
+
+.rodape__texto{
+    color: var(--cinza-secundario);
+    margin: 1em 0;
 }
